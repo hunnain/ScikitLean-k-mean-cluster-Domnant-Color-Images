@@ -49,8 +49,10 @@ jobs:
           command: |
             . venv/bin/activate
             python dominant.py test
+            mkdir /tmp/test-reports
+            echo "my name is --" > /tmp/test-reports/report001 ;
 
       - store_artifacts:
-          path: test-reports
+          path: /tmp/test-reports
           destination: test-reports
           
